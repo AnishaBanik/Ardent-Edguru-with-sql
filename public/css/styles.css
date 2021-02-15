@@ -159,12 +159,11 @@
     }
 }
 .image1{
-    width: 93%;
-    height: auto;
+    width: 70%;
+    height: 65%;
     padding: 0% 0%;
-    box-shadow: 6px 5px 20px 11px #f1eeee;
-    margin-left: 0px;
-    border-radius: 12px;
+    margin-left: 18%;
+    border: 30px solid #ff7600;
 }
 .first_page{
     width: 100%;
@@ -344,11 +343,10 @@ height: 100%;
     margin-left: 0%;
 }
 .image2{
-    width: 100%;
-    padding-top: 10%;
-    box-shadow: 2px 7px 20px 16px #e7e7e7;
-    border-radius: 10px;
-    padding: 15px;
+    width: 88%;
+   height: 69%;
+   border: 20px solid #6a2bbd;
+   margin: 0% 6%;
 }
 .image3{
     padding-left: 15px;

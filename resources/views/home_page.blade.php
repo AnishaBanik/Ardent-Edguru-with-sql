@@ -52,16 +52,18 @@
         Learn More
       </button>
     </div>
-    <div class="col-md-5 d-none d-lg-block" style="background-color: #ff7600;">
-      <img src="{{ Voyager::image( $setting[0]->logo )}}" alt="image1" class="image1">
+    <div class="col-md-5 d-none d-lg-block" >
+      <img src="{{ Voyager::image( $setting[0]->logo )}}" alt="image1" class="image1" 
+      style="box-shadow: none;">
     </div>
   </div>
 </section>
 
 <section id="switch">
   <div class="row switch-to">
-    <div class="col-md-4 col-sm-4 " style="background-color: #6a2bbd;">
-      <img src="{{ Voyager::image( $setting[1]->logo )}}" alt="image2" class="image2">
+    <div class="col-md-4 col-sm-4 ">
+      <img src="{{ Voyager::image( $setting[1]->logo )}}" alt="image2" class="image2"
+      style="box-shadow: none;">
     </div>
     <div class="col-md-8 col-sm-12 switch-to-desc">
       <h4 class="scnd_head">
@@ -208,14 +210,17 @@
       <p class="last_head">
         {{$setting[5]->heading}}
       </p>
-      <form>
+      <form action="submit" method="POST">
+        @csrf
         <div class="row form-group query-text">
           <label class="col-md-5">Email address</label>
-          <input type="email" class="col-md-7 form-control query-input" placeholder="Enter email">
+          <input type="email" class="col-md-7 form-control query-input" placeholder="Enter email" 
+          name="email_id">
         </div>
       <div class="row form-group query-text">
         <label class="col-md-5">Query Description</label>
-        <textarea class="col-md-7 form-control query-input"></textarea>
+        <textarea class="col-md-7 form-control query-input" placeholder="Write your query"
+        name="description"></textarea>
       </div>
       <div class="row">
         <div class="col-md-5"></div>

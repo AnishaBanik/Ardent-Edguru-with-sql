@@ -7,6 +7,7 @@ use  App\Models\Home;
 use  App\Models\Slider;
 use  App\Models\Contact;
 use  App\Models\Navbar;
+use  App\Models\Queries;
 
 class WebsiteController extends Controller
 {
@@ -34,5 +35,20 @@ class WebsiteController extends Controller
    public function privacy_policy(Request $request)
    {
    	return view("privacy_policy");
+   }
+   public function submitQuery(Request $request)
+   {
+      //print_r($request->input());\
+      $email = $request->get("email_id");
+
+      // if(!$email){
+
+      //    return view("error");
+      // }
+      $query = new Queries;
+      $query->email_id = $request->email_id;
+      $query->description = $request->description;
+      $query-> save();
+      return redirect()->back();
    }
 }
