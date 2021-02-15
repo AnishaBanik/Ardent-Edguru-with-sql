@@ -52,7 +52,7 @@
         Learn More
       </button>
     </div>
-    <div class="col-md-5 d-none d-lg-block">
+    <div class="col-md-5 d-none d-lg-block" style="background-color: #ff7600;">
       <img src="{{ Voyager::image( $setting[0]->logo )}}" alt="image1" class="image1">
     </div>
   </div>
@@ -60,7 +60,7 @@
 
 <section id="switch">
   <div class="row switch-to">
-    <div class="col-md-4 col-sm-4 ">
+    <div class="col-md-4 col-sm-4 " style="background-color: #6a2bbd;">
       <img src="{{ Voyager::image( $setting[1]->logo )}}" alt="image2" class="image2">
     </div>
     <div class="col-md-8 col-sm-12 switch-to-desc">
