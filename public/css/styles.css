@@ -2,6 +2,20 @@
 
 
 @media(min-width: 1550px){
+    .stu-teach{
+    background-image: linear-gradient(to right, #0e0869, #7a84f3);
+    color: white;
+    padding: 1% 5% !important;
+    width: 196px;
+    height: 42px;
+    border-radius: 0px;
+    border: none;
+    text-align: center;
+    font-family: Gayathri;
+    font-size: 20px;
+    margin: 2% 48% !important;
+    border-radius: 10px;
+    }
     .image9{
     width: auto;
     height: auto;
@@ -47,22 +61,23 @@
     text-align: center;
     font-family: Gayathri;
     font-size: 25px;
-    margin: 5% 20% !important;
+    margin: 5% 33% !important;
     border-radius: 10px;
     }
     .submit-btn{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
     color: white !important;
-    width: 158px;
-    height: 54px;
+    width: 110px !important;
+    height: 44px;
     border-radius: 12px !important;
-    font-size: 20px;
+    font-size: 20px !important;
     border: none !important;
     margin-left: 20% !important;
     }
     .query-input{
     width: 55%;
     margin-left: 20% !important;
+    font-size: 20px !important;
     }
     .nav-header li a {
     font-size: 16px !important ;
@@ -98,13 +113,17 @@
         margin: 10% !important;
         box-shadow: 10px 10px 5px #ccc;
     }
+    .image8{
+        text-align: center !important;
+        border-radius: 20px !important;
+        width: 75% !important;
+        margin: 10% !important;
+        box-shadow: 10px 10px 5px #ccc;
+    }
     .part-container{
         margin-top: -30% !important;
     }    
-    .image8{
-     text-align: center;
-     padding-top: 40%;
-    }
+    
     .scnd_head{
         margin-top: 4%;
         text-align: center;
@@ -160,10 +179,8 @@
 }
 .image1{
     width: 70%;
-    height: 65%;
-    padding: 0% 0%;
-    margin-left: 18%;
-    border: 30px solid #ff7600;
+    height: 70%;
+    margin: 12% 15%;
 }
 .first_page{
     width: 100%;
@@ -343,10 +360,9 @@ height: 100%;
     margin-left: 0%;
 }
 .image2{
-    width: 88%;
-   height: 69%;
-   border: 20px solid #6a2bbd;
-   margin: 0% 6%;
+    width: 80%;
+   height: 65%;
+   margin: 9% 10%;
 }
 .image3{
     padding-left: 15px;
@@ -399,16 +415,18 @@ font-family: Gayathri;
 .image7{
     text-align: center !important;
     border-radius: 20px !important;
-    width: 70%;
-    height: auto;
-    margin: 6% 15%;
+    width: 96%;
+    height: 100%;
     box-shadow: 10px 10px 5px #ccc;
+    margin: 9% 14%;
 }
 .image8{
-    text-align: center;
- width: 42%;
- margin-top: -75px;
- margin-left: 29%;
+   text-align: center !important;
+    border-radius: 20px !important;
+    width: 90%;
+    height: 90%;
+    margin: 7% 15%;
+    box-shadow: 10px 10px 5px #ccc;
 }
 .image9{
     width: auto;
@@ -423,15 +441,15 @@ font-family: Gayathri;
 .stu-teach{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
     color: white;
-    padding: 2% 5%;
+    padding: 3% 5%;
     width: 196px;
     height: 42px;
     border-radius: 0px;
     border: none;
     text-align: center;
     font-family: Gayathri;
-    font-size: 25px;
-    margin: 5% 20%;
+    font-size: 20px;
+    margin: 5% 33%;
     border-radius: 10px;
 }
 .image10{
@@ -671,11 +689,12 @@ section.banner-section {
 }
 
 .col-md-8.col-sm-12.switch-to-desc > div >div > div {
-    box-shadow: 0px 6px 16px 7px #f3f3f3;
+    box-shadow: 0px 6px 16px 7px #f1eeee;
     margin: 10px;
     width: 30%;
     padding: 11px;
     border-radius: 13px;
+    min-height: 280px !important;
 }
 .cards.cardboard.card {
     box-shadow: 6px 5px 20px 11px #f1eeee;
@@ -694,13 +713,35 @@ section.banner-section {
 }
 .query-input{
     width: 55% !important;
+     font-size: 20px !important;
 }
 .submit-btn{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
     color: white !important;
-    width: 158px;
-    height: 54px;
+    width: 140px;
+    height: 44px;
     border-radius: 12px !important;
-    font-size: 20px;
+    font-size: 22px !important;
     border: none !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
 }

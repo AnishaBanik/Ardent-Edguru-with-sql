@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2021 at 07:18 PM
+-- Generation Time: Feb 17, 2021 at 01:36 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ardent_edguru`
+-- Database: `ardent-edguru`
 --
 
 -- --------------------------------------------------------
@@ -187,8 +187,8 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'home\\February2021\\3n0wa5wfl7FdtCSXyZ0O.png', 'ONLINE LEARNING', 'Welcome to the gateway of online learning. Choose your class/tution and register to start a life altering journey bringing you closer to your goals.', '2021-02-12 11:42:52', '2021-02-12 11:42:52'),
-(2, 'home\\February2021\\ffB0SBfAiXPSVtFrqPWQ.jpg', 'Switch to EdGuru', 'Learn from the best gurus online from the comfort and safety of your home. <br>\r\n        Our panel of teachers are a few clicks away.', '2021-02-12 11:59:45', '2021-02-12 11:59:45'),
+(1, 'home\\February2021\\RE3KRpdoOoRXT2bLtG3e.png', 'ONLINE LEARNING', 'Welcome to the gateway of online learning. Choose your class/tution and register to start a life altering journey bringing you closer to your goals.', '2021-02-12 11:42:00', '2021-02-17 00:36:29'),
+(2, 'home\\February2021\\ZQKU0N35npVk5U5Opd49.png', 'Switch to EdGuru', 'Learn from the best gurus online from the comfort and safety of your home. <br>\r\n        Our panel of teachers are a few clicks away.', '2021-02-12 11:59:00', '2021-02-17 01:57:19'),
 (3, NULL, 'What we offer', 'We have empanelled vast of experienced school and private tutors,<br> who will now be available for online live tution classes. <br>Choose your class according to your board/grade and other options.', '2021-02-12 12:02:26', '2021-02-12 12:02:26'),
 (4, NULL, 'Register with us for free', 'You are a few clicks away from entering a new age of learning/teaching experience. <br>\r\n        Please register here.', '2021-02-12 12:02:48', '2021-02-12 12:02:48'),
 (5, NULL, 'Contact Us', NULL, '2021-02-12 12:31:09', '2021-02-12 12:31:09'),
@@ -469,6 +469,32 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `queries`
+--
+
+CREATE TABLE `queries` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `email_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `queries`
+--
+
+INSERT INTO `queries` (`id`, `email_id`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'abc@v.v', 'qwerty', NULL, NULL),
+(3, 'anisha@gmail.com', 'hello', NULL, NULL),
+(4, 'anisha@gmail.com', 'hello', NULL, NULL),
+(5, 'anisha@gmail.com', 'hello', NULL, NULL),
+(6, 'anisha1@g.c', 'hi', NULL, NULL),
+(7, 'a@a.a', 'query', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roles`
 --
 
@@ -540,14 +566,14 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `logo`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'slider\\February2021\\I8xUocUGPukEIOI5eqar.png', 'Easy to register for free. Pay once you choose.', '2021-02-12 12:15:09', '2021-02-12 12:15:09'),
-(2, 'slider\\February2021\\eOctKknd8sbe2JIMVd1h.png', 'Panel of experienced teachers at your fingertips.', '2021-02-12 12:15:35', '2021-02-12 12:15:35'),
-(3, 'slider\\February2021\\baTP3O0SUDjEkxkkJU1A.png', 'Flexible slot selection based on your timing.', '2021-02-12 12:15:58', '2021-02-12 12:15:58'),
+(1, 'slider\\February2021\\HrDirPB9FawispLdHONV.png', 'Easy to register for free. Pay once you choose.', '2021-02-12 12:15:00', '2021-02-17 01:35:39'),
+(2, 'slider\\February2021\\r9fex9TAQoHAaCjhB48j.png', 'Panel of experienced teachers at your fingertips.', '2021-02-12 12:15:00', '2021-02-17 01:35:57'),
+(3, 'slider\\February2021\\bIk5PuY0OJFkcuJzJA21.png', 'Flexible slot selection based on your timing.', '2021-02-12 12:15:00', '2021-02-17 01:36:21'),
 (4, 'slider\\February2021\\KNqi2Aw44uKGx9b2ZB1g.JPG', 'ICSE BOARD', '2021-02-12 12:16:23', '2021-02-12 12:16:23'),
 (5, 'slider\\February2021\\cMgxAXUx2WTQzzlh9H09.JPG', 'WB BOARD', '2021-02-12 12:16:41', '2021-02-12 12:16:41'),
 (6, 'slider\\February2021\\6H0NwtyWPnkuym9iMT7O.JPG', 'CBSE BOARD', '2021-02-12 12:17:02', '2021-02-12 12:17:02'),
-(7, 'slider\\February2021\\OTYeO3tKAGMnCaRyL5tk.jpg', 'As a student', '2021-02-12 12:17:32', '2021-02-12 12:17:32'),
-(8, 'slider\\February2021\\VLzZ9Kr2qyXfFaQ0JLb8.jpg', 'As a teacher', '2021-02-12 12:17:54', '2021-02-12 12:17:54');
+(7, 'slider\\February2021\\AQRzigO7TOCzTZvWLqnL.jpg', 'As a student', '2021-02-12 12:17:00', '2021-02-17 01:06:17'),
+(8, 'slider\\February2021\\GpqlRtU1QX1G09Z7kyPM.jpg', 'As a teacher', '2021-02-12 12:17:00', '2021-02-17 01:06:35');
 
 -- --------------------------------------------------------
 
@@ -726,6 +752,12 @@ ALTER TABLE `permission_role`
   ADD KEY `permission_role_role_id_index` (`role_id`);
 
 --
+-- Indexes for table `queries`
+--
+ALTER TABLE `queries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
@@ -831,6 +863,12 @@ ALTER TABLE `navbar`
 --
 ALTER TABLE `permissions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
+--
+-- AUTO_INCREMENT for table `queries`
+--
+ALTER TABLE `queries`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `roles`

@@ -38,7 +38,7 @@
 <div style="background-color: white;padding-top:150px; width: 99%">
 <section class="banner-section" id="home">
   <div class="row">
-    <div class="col-md-7 col-sm-12">
+    <div class="col-md-8 col-sm-12">
       <p class="header">
         {{$setting[0]->heading}}
         <p class="for-all">
@@ -52,7 +52,7 @@
         Learn More
       </button>
     </div>
-    <div class="col-md-5 d-none d-lg-block" >
+    <div class="col-md-4 d-none d-lg-block " style="background-color: #ff7600">
       <img src="{{ Voyager::image( $setting[0]->logo )}}" alt="image1" class="image1" 
       style="box-shadow: none;">
     </div>
@@ -61,7 +61,7 @@
 
 <section id="switch">
   <div class="row switch-to">
-    <div class="col-md-4 col-sm-4 ">
+    <div class="col-md-4 col-sm-4" style="background-color: #6a2bbd">
       <img src="{{ Voyager::image( $setting[1]->logo )}}" alt="image2" class="image2"
       style="box-shadow: none;">
     </div>
@@ -161,7 +161,7 @@
     </div>
     <div class="col-md-6 col-sm-12">
       <div class="card join-card">
-        <img src="{{ Voyager::image( $slider[7]->logo )}}" alt="image8" class="image7">
+        <img src="{{ Voyager::image( $slider[7]->logo )}}" alt="image8" class="image8">
         <a href="/teacher_register">
           <button class="stu-teach">
           {!!$slider[7]->description!!}
@@ -215,12 +215,12 @@
         <div class="row form-group query-text">
           <label class="col-md-5">Email address</label>
           <input type="email" class="col-md-7 form-control query-input" placeholder="Enter email" 
-          name="email_id">
+          name="email_id" required>
         </div>
       <div class="row form-group query-text">
         <label class="col-md-5">Query Description</label>
         <textarea class="col-md-7 form-control query-input" placeholder="Write your query"
-        name="description"></textarea>
+        name="description" required></textarea>
       </div>
       <div class="row">
         <div class="col-md-5"></div>
@@ -232,6 +232,7 @@
     </form>
     </div>
 </section>
+
 </body>
 <hr>
 <footer class="footer">

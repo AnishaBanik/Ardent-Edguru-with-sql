@@ -40,15 +40,23 @@ class WebsiteController extends Controller
    {
       //print_r($request->input());\
       $email = $request->get("email_id");
-
-      // if(!$email){
-
-      //    return view("error");
-      // }
-      $query = new Queries;
-      $query->email_id = $request->email_id;
-      $query->description = $request->description;
-      $query-> save();
-      return redirect()->back();
+      $description = $request->get("description");
+      if(!$email || !$description)
+      {
+         return view("error");
+         //return redirect('/')->session()->put('key', 'hello new');
+            // echo "<script> 
+            //    alert('hello new');
+            //    window.location.href='/';
+            // </script>";
+      }
+      else{
+         $query = new Queries;
+         $query->email_id = $request->email_id;
+         $query->description = $request->description;
+         $query-> save();
+         return redirect()->back();
+      }
+      
    }
 }
