@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2021 at 01:36 PM
+-- Generation Time: Feb 23, 2021 at 02:21 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -19,8 +19,31 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ardent-edguru`
+-- Database: `ardent_edguru`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `heading` longtext COLLATE utf8mb4_unicode_ci,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `background_colour` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`, `background_colour`) VALUES
+(1, 'about\\February2021\\j3ycCxzzZ7K67UG3zpuz.JPG', 'Hello', '<p>History of creation.</p>\r\n<p>Description about the organisation.</p>', '2021-02-23 07:37:09', '2021-02-23 07:37:09', '#d68a8a');
 
 -- --------------------------------------------------------
 
@@ -112,7 +135,30 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (72, 12, 'id', 'hidden', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (73, 12, 'heading', 'text', 'Heading', 0, 1, 1, 1, 1, 0, '{}', 2),
 (74, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 0, '{}', 3),
-(75, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 4);
+(75, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 4),
+(76, 13, 'id', 'hidden', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(77, 13, 'heading', 'text_area', 'Heading', 0, 1, 1, 1, 1, 0, '{}', 2),
+(78, 13, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 3),
+(79, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(80, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(81, 14, 'id', 'hidden', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(82, 14, 'heading', 'text_area', 'Heading', 0, 1, 1, 1, 1, 0, '{}', 2),
+(83, 14, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 3),
+(84, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(85, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(86, 15, 'id', 'text', 'Id', 1, 1, 1, 1, 1, 1, '{}', 1),
+(87, 15, 'email_id', 'text', 'Email Id', 0, 1, 1, 1, 1, 1, '{}', 2),
+(88, 15, 'description', 'text_area', 'Description', 0, 1, 1, 1, 1, 1, '{}', 3),
+(89, 15, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(90, 15, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(91, 9, 'background_colour', 'color', 'Background Colour', 0, 1, 1, 1, 1, 1, '{}', 7),
+(92, 16, 'id', 'hidden', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(93, 16, 'logo', 'image', 'Logo', 0, 1, 1, 1, 1, 1, '{}', 2),
+(94, 16, 'heading', 'text_area', 'Heading', 0, 1, 1, 1, 1, 1, '{}', 3),
+(95, 16, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 4),
+(96, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 0, '{}', 5),
+(97, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(98, 16, 'background_colour', 'color', 'Background Colour', 0, 1, 1, 1, 1, 1, '{}', 7);
 
 -- --------------------------------------------------------
 
@@ -146,10 +192,14 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2021-02-12 10:52:18', '2021-02-12 10:52:18'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2021-02-12 10:52:18', '2021-02-12 10:52:18'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2021-02-12 10:52:18', '2021-02-12 10:52:18'),
-(9, 'home', 'home', 'Home', 'Homes', 'voyager-anchor', 'App\\Models\\Home', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 11:36:32', '2021-02-12 12:06:12'),
+(9, 'home', 'home', 'Home', 'Homes', 'voyager-anchor', 'App\\Models\\Home', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 11:36:32', '2021-02-23 02:33:45'),
 (10, 'slider', 'slider', 'Slider', 'Sliders', 'voyager-dot-3', 'App\\Models\\Slider', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:09:26', '2021-02-12 12:11:06'),
 (11, 'contact', 'contact', 'Contact', 'Contacts', 'voyager-telephone', 'App\\Models\\Contact', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:24:29', '2021-02-12 12:25:56'),
-(12, 'navbar', 'navbar', 'Navbar', 'Navbars', 'voyager-params', 'App\\Models\\Navbar', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:35:51', '2021-02-12 12:37:18');
+(12, 'navbar', 'navbar', 'Navbar', 'Navbars', 'voyager-params', 'App\\Models\\Navbar', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:35:51', '2021-02-12 12:37:18'),
+(13, 'privacy_policy', 'privacy-policy', 'Privacy Policy', 'Privacy Policies', 'voyager-rocket', 'App\\Models\\PrivacyPolicy', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-23 01:00:30', '2021-02-23 06:31:00'),
+(14, 'terms', 'terms', 'Term', 'Terms', NULL, 'App\\Models\\Term', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
+(15, 'queries', 'queries', 'Query', 'Queries', NULL, 'App\\Models\\Queries', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
+(16, 'about', 'about', 'About', 'Abouts', NULL, 'App\\Models\\About', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-23 07:29:28', '2021-02-23 07:36:46');
 
 -- --------------------------------------------------------
 
@@ -179,20 +229,21 @@ CREATE TABLE `home` (
   `heading` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `background_colour` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `home`
 --
 
-INSERT INTO `home` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'home\\February2021\\RE3KRpdoOoRXT2bLtG3e.png', 'ONLINE LEARNING', 'Welcome to the gateway of online learning. Choose your class/tution and register to start a life altering journey bringing you closer to your goals.', '2021-02-12 11:42:00', '2021-02-17 00:36:29'),
-(2, 'home\\February2021\\ZQKU0N35npVk5U5Opd49.png', 'Switch to EdGuru', 'Learn from the best gurus online from the comfort and safety of your home. <br>\r\n        Our panel of teachers are a few clicks away.', '2021-02-12 11:59:00', '2021-02-17 01:57:19'),
-(3, NULL, 'What we offer', 'We have empanelled vast of experienced school and private tutors,<br> who will now be available for online live tution classes. <br>Choose your class according to your board/grade and other options.', '2021-02-12 12:02:26', '2021-02-12 12:02:26'),
-(4, NULL, 'Register with us for free', 'You are a few clicks away from entering a new age of learning/teaching experience. <br>\r\n        Please register here.', '2021-02-12 12:02:48', '2021-02-12 12:02:48'),
-(5, NULL, 'Contact Us', NULL, '2021-02-12 12:31:09', '2021-02-12 12:31:09'),
-(6, NULL, 'Query form', NULL, '2021-02-12 12:31:24', '2021-02-12 12:31:24');
+INSERT INTO `home` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`, `background_colour`) VALUES
+(1, 'home\\February2021\\3n0wa5wfl7FdtCSXyZ0O.png', 'ONLINE LEARNING', 'Welcome to the gateway of online learning. Choose your class/tution and register to start a life altering journey bringing you closer to your goals.', '2021-02-12 11:42:00', '2021-02-23 04:56:56', '#ffffff'),
+(2, 'home\\February2021\\ffB0SBfAiXPSVtFrqPWQ.jpg', 'Switch to EdGuru', 'Learn from the best gurus online from the comfort and safety of your home. <br>\r\n        Our panel of teachers are a few clicks away.', '2021-02-12 11:59:00', '2021-02-23 04:57:07', '#ffffff'),
+(3, NULL, 'What we offer', 'We have empanelled vast of experienced school and private tutors,<br> who will now be available for online live tution classes. <br>Choose your class according to your board/grade and other options.', '2021-02-12 12:02:00', '2021-02-23 04:57:57', '#ffffff'),
+(4, NULL, 'Register with us for free', 'You are a few clicks away from entering a new age of learning/teaching experience. <br>\r\n        Please register here.', '2021-02-12 12:02:00', '2021-02-23 04:57:22', '#ffffff'),
+(5, NULL, 'Contact Us', NULL, '2021-02-12 12:31:00', '2021-02-23 04:57:32', '#ffffff'),
+(6, NULL, 'Query form', NULL, '2021-02-12 12:31:00', '2021-02-23 04:57:46', '#ffffff');
 
 -- --------------------------------------------------------
 
@@ -255,7 +306,11 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (16, 1, 'Homes', '', '_self', 'voyager-anchor', '#000000', NULL, 15, '2021-02-12 11:36:32', '2021-02-12 12:06:40', 'voyager.home.index', 'null'),
 (17, 1, 'Sliders', '', '_self', 'voyager-dot-3', NULL, NULL, 16, '2021-02-12 12:09:26', '2021-02-12 12:09:26', 'voyager.slider.index', NULL),
 (18, 1, 'Contacts', '', '_self', 'voyager-telephone', NULL, NULL, 17, '2021-02-12 12:24:29', '2021-02-12 12:24:29', 'voyager.contact.index', NULL),
-(19, 1, 'Navbars', '', '_self', 'voyager-params', NULL, NULL, 18, '2021-02-12 12:35:51', '2021-02-12 12:35:51', 'voyager.navbar.index', NULL);
+(19, 1, 'Navbars', '', '_self', 'voyager-params', NULL, NULL, 18, '2021-02-12 12:35:51', '2021-02-12 12:35:51', 'voyager.navbar.index', NULL),
+(20, 1, 'Privacy Policies', '', '_self', 'voyager-rocket', '#000000', NULL, 19, '2021-02-23 01:00:31', '2021-02-23 02:53:17', 'voyager.privacy-policy.index', 'null'),
+(21, 1, 'Terms', '', '_self', 'voyager-lifebuoy', '#000000', NULL, 20, '2021-02-23 01:56:22', '2021-02-23 02:53:37', 'voyager.terms.index', 'null'),
+(22, 1, 'Queries', '', '_self', 'voyager-question', '#000000', NULL, 21, '2021-02-23 02:26:02', '2021-02-23 02:54:25', 'voyager.queries.index', 'null'),
+(23, 1, 'Abouts', '', '_self', NULL, NULL, NULL, 22, '2021-02-23 07:29:28', '2021-02-23 07:29:28', 'voyager.about.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -321,10 +376,10 @@ CREATE TABLE `navbar` (
 
 INSERT INTO `navbar` (`id`, `heading`, `created_at`, `updated_at`) VALUES
 (1, 'Home', '2021-02-12 12:37:44', '2021-02-12 12:37:44'),
-(2, 'Switch here', '2021-02-12 12:37:59', '2021-02-12 12:37:59'),
-(3, 'Our offerings', '2021-02-12 12:38:13', '2021-02-12 12:38:13'),
+(2, 'About us', '2021-02-12 12:37:00', '2021-02-23 07:19:57'),
+(3, 'Our classes', '2021-02-12 12:38:00', '2021-02-23 07:20:15'),
 (4, 'Register', '2021-02-12 12:38:26', '2021-02-12 12:38:26'),
-(5, 'Contact', '2021-02-12 12:38:38', '2021-02-12 12:38:38');
+(5, 'Contact Us', '2021-02-12 12:38:00', '2021-02-23 07:20:27');
 
 -- --------------------------------------------------------
 
@@ -402,7 +457,27 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (63, 'read_navbar', 'navbar', '2021-02-12 12:35:51', '2021-02-12 12:35:51'),
 (64, 'edit_navbar', 'navbar', '2021-02-12 12:35:51', '2021-02-12 12:35:51'),
 (65, 'add_navbar', 'navbar', '2021-02-12 12:35:51', '2021-02-12 12:35:51'),
-(66, 'delete_navbar', 'navbar', '2021-02-12 12:35:51', '2021-02-12 12:35:51');
+(66, 'delete_navbar', 'navbar', '2021-02-12 12:35:51', '2021-02-12 12:35:51'),
+(67, 'browse_privacy_policy', 'privacy_policy', '2021-02-23 01:00:31', '2021-02-23 01:00:31'),
+(68, 'read_privacy_policy', 'privacy_policy', '2021-02-23 01:00:31', '2021-02-23 01:00:31'),
+(69, 'edit_privacy_policy', 'privacy_policy', '2021-02-23 01:00:31', '2021-02-23 01:00:31'),
+(70, 'add_privacy_policy', 'privacy_policy', '2021-02-23 01:00:31', '2021-02-23 01:00:31'),
+(71, 'delete_privacy_policy', 'privacy_policy', '2021-02-23 01:00:31', '2021-02-23 01:00:31'),
+(72, 'browse_terms', 'terms', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
+(73, 'read_terms', 'terms', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
+(74, 'edit_terms', 'terms', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
+(75, 'add_terms', 'terms', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
+(76, 'delete_terms', 'terms', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
+(77, 'browse_queries', 'queries', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
+(78, 'read_queries', 'queries', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
+(79, 'edit_queries', 'queries', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
+(80, 'add_queries', 'queries', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
+(81, 'delete_queries', 'queries', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
+(82, 'browse_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
+(83, 'read_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
+(84, 'edit_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
+(85, 'add_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
+(86, 'delete_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28');
 
 -- --------------------------------------------------------
 
@@ -464,7 +539,49 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (63, 1),
 (64, 1),
 (65, 1),
-(66, 1);
+(66, 1),
+(67, 1),
+(68, 1),
+(69, 1),
+(70, 1),
+(71, 1),
+(72, 1),
+(73, 1),
+(74, 1),
+(75, 1),
+(76, 1),
+(77, 1),
+(78, 1),
+(79, 1),
+(80, 1),
+(81, 1),
+(82, 1),
+(83, 1),
+(84, 1),
+(85, 1),
+(86, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `privacy_policy`
+--
+
+CREATE TABLE `privacy_policy` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `heading` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `privacy_policy`
+--
+
+INSERT INTO `privacy_policy` (`id`, `heading`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Privacy Policy for EdGuru', '<p>At EdGuru India, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by EdGuru India and how we use it.</p>\r\n<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>\r\n<p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in EdGuru India. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Free Privacy Policy Generator.</p>', '2021-02-23 01:05:00', '2021-02-23 01:42:20'),
+(2, 'Consent', '<p>By using our website, you hereby consent to our Privacy Policy and agree to our terms.&nbsp;</p>', '2021-02-23 01:43:00', '2021-02-23 01:47:39');
 
 -- --------------------------------------------------------
 
@@ -490,7 +607,9 @@ INSERT INTO `queries` (`id`, `email_id`, `description`, `created_at`, `updated_a
 (4, 'anisha@gmail.com', 'hello', NULL, NULL),
 (5, 'anisha@gmail.com', 'hello', NULL, NULL),
 (6, 'anisha1@g.c', 'hi', NULL, NULL),
-(7, 'a@a.a', 'query', NULL, NULL);
+(7, 'a@a.a', 'query', NULL, NULL),
+(8, 'b@b.com', 'qwe', NULL, NULL),
+(9, 'q@q.com', 'abcd', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -566,14 +685,35 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `logo`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'slider\\February2021\\HrDirPB9FawispLdHONV.png', 'Easy to register for free. Pay once you choose.', '2021-02-12 12:15:00', '2021-02-17 01:35:39'),
-(2, 'slider\\February2021\\r9fex9TAQoHAaCjhB48j.png', 'Panel of experienced teachers at your fingertips.', '2021-02-12 12:15:00', '2021-02-17 01:35:57'),
-(3, 'slider\\February2021\\bIk5PuY0OJFkcuJzJA21.png', 'Flexible slot selection based on your timing.', '2021-02-12 12:15:00', '2021-02-17 01:36:21'),
-(4, 'slider\\February2021\\KNqi2Aw44uKGx9b2ZB1g.JPG', 'ICSE BOARD', '2021-02-12 12:16:23', '2021-02-12 12:16:23'),
-(5, 'slider\\February2021\\cMgxAXUx2WTQzzlh9H09.JPG', 'WB BOARD', '2021-02-12 12:16:41', '2021-02-12 12:16:41'),
-(6, 'slider\\February2021\\6H0NwtyWPnkuym9iMT7O.JPG', 'CBSE BOARD', '2021-02-12 12:17:02', '2021-02-12 12:17:02'),
-(7, 'slider\\February2021\\AQRzigO7TOCzTZvWLqnL.jpg', 'As a student', '2021-02-12 12:17:00', '2021-02-17 01:06:17'),
-(8, 'slider\\February2021\\GpqlRtU1QX1G09Z7kyPM.jpg', 'As a teacher', '2021-02-12 12:17:00', '2021-02-17 01:06:35');
+(1, 'slider\\February2021\\I8xUocUGPukEIOI5eqar.png', 'Easy to register for free. Pay once you choose.', '2021-02-12 12:15:09', '2021-02-12 12:15:09'),
+(2, 'slider\\February2021\\eOctKknd8sbe2JIMVd1h.png', 'Panel of experienced teachers at your fingertips.', '2021-02-12 12:15:35', '2021-02-12 12:15:35'),
+(3, 'slider\\February2021\\baTP3O0SUDjEkxkkJU1A.png', 'Flexible slot selection based on your timing.', '2021-02-12 12:15:58', '2021-02-12 12:15:58'),
+(4, 'slider\\February2021\\UpneA97W7xu7KNPJ70I5.jpeg', 'ICSE BOARD', '2021-02-12 12:16:00', '2021-02-23 02:50:04'),
+(5, 'slider\\February2021\\D1lfRGfQB7EzGsqkqJNF.png', 'WB BOARD', '2021-02-12 12:16:00', '2021-02-23 02:02:56'),
+(6, 'slider\\February2021\\dRJ0KwlNKZBibHoUi36U.png', 'CBSE BOARD', '2021-02-12 12:17:00', '2021-02-23 02:02:35'),
+(7, 'slider\\February2021\\OTYeO3tKAGMnCaRyL5tk.jpg', 'As a student', '2021-02-12 12:17:32', '2021-02-12 12:17:32'),
+(8, 'slider\\February2021\\VLzZ9Kr2qyXfFaQ0JLb8.jpg', 'As a teacher', '2021-02-12 12:17:54', '2021-02-12 12:17:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `terms`
+--
+
+CREATE TABLE `terms` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `heading` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `terms`
+--
+
+INSERT INTO `terms` (`id`, `heading`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Terms and Conditions', '<p><span style=\"color: #212529; font-family: Gayathri; font-size: 20px; text-align: justify;\">Welcome to EdGuru India These terms and conditions outline the rules and regulations for the use of EdGuru Indias Website, located at edguru.ardentsoftware.co.in By accessing this website we assume you accept these terms and conditions. Do not continue to use EdGuru India if you do not agree to take all of the terms and conditions stated on this page. The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: \"Client\", \"You\" and \"Your\" refers to you, the person log on this website and compliant to the Company&rsquo;s terms and conditions. \"The Company\", \"Ourselves\", \"We\", \"Our\" and \"Us\", refers to our Company. \"Party\", \"Parties\", or \"Us\", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client&rsquo;s needs in respect of provision of the Company&rsquo;s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</span></p>', '2021-02-23 02:00:02', '2021-02-23 02:00:02');
 
 -- --------------------------------------------------------
 
@@ -671,6 +811,12 @@ CREATE TABLE `user_roles` (
 --
 
 --
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -752,6 +898,12 @@ ALTER TABLE `permission_role`
   ADD KEY `permission_role_role_id_index` (`role_id`);
 
 --
+-- Indexes for table `privacy_policy`
+--
+ALTER TABLE `privacy_policy`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `queries`
 --
 ALTER TABLE `queries`
@@ -775,6 +927,12 @@ ALTER TABLE `settings`
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `terms`
+--
+ALTER TABLE `terms`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -805,6 +963,12 @@ ALTER TABLE `user_roles`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
@@ -814,13 +978,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -844,7 +1008,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -862,13 +1026,19 @@ ALTER TABLE `navbar`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+
+--
+-- AUTO_INCREMENT for table `privacy_policy`
+--
+ALTER TABLE `privacy_policy`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `queries`
 --
 ALTER TABLE `queries`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -887,6 +1057,12 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `terms`
+--
+ALTER TABLE `terms`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `translations`
