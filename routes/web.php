@@ -24,6 +24,8 @@ Route::get('/terms', [WebsiteController::class, "terms"]);
 
 Route::get('/privacy_policy', [WebsiteController::class, "privacy_policy"]);
 
+Route::get('/about', [WebsiteController::class, "about"]);
+
 Route::view('form', 'home_page');
 Route::post('submit', [WebsiteController::class, "submitQuery"]);
 

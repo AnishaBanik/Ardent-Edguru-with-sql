@@ -13,7 +13,7 @@
     text-align: center;
     font-family: Gayathri;
     font-size: 20px;
-    margin: 2% 48% !important;
+    margin: 2% 24% !important;
     border-radius: 10px;
     }
     .image9{
@@ -61,7 +61,7 @@
     text-align: center;
     font-family: Gayathri;
     font-size: 25px;
-    margin: 5% 33% !important;
+    margin: 5% 24% !important;
     border-radius: 10px;
     }
     .submit-btn{
@@ -181,6 +181,8 @@
     width: 70%;
     height: 70%;
     margin: 12% 15%;
+    object-fit: fill;
+    display: block;
 }
 .first_page{
     width: 100%;
@@ -212,7 +214,7 @@ background-color: white;
 .header{
     font-family: Gayathri;
     padding-left: 5%;
-    padding-top: 0%;
+    padding-top: 4%;
     font-size: 57px;
 }
 .for-all{
@@ -249,7 +251,7 @@ background-color: white;
 .scnd_head{
     font-family: Gayathri;
     font-size: 46px;
-    padding-top: 0%;
+    padding-top: 2%;
 }
 .scnd_desc{
     font-family: Average Sans;
@@ -274,11 +276,11 @@ background-color: white;
     font-size: 22px;
 }
 .row_change{
-    background-color: white;
+    
     height: 100%;
 }
 .cards{
-    background-color: #d8cfd7 !important;
+    background-color: #f7f0f7 !important;
     height: auto;
     width: 80%;
     margin-top: -150px;
@@ -293,12 +295,12 @@ background-color: white;
     border: none !important;
 }
 .forth_row_up{
-background-color: white;
+
     height: auto;
     padding-top: 3%;
 }
 .forth_row_down{
-    background-color: white;
+    
 height: 100%;
 }
 .forth_head{
@@ -369,11 +371,13 @@ height: 100%;
     padding-top: 13px;
 }
 .image4{
-    height: auto;
-    width: 55%;
-
-padding-left: 40%;
-    padding-top: 14px;
+        height: 250px;
+    width: 200px;
+    margin: 2% 14%;
+    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 .icse{
 font-family: Gayathri;
@@ -382,10 +386,13 @@ font-family: Gayathri;
     padding-top: 9px
 }
 .image5{
-    height: auto;
-    width: 84%;
-padding-left: 15%;
-    padding-top: 15px;
+    height: 250px;
+    width: 200px;
+    margin: 2% 14%;
+    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 .wb{
 font-family: Gayathri;
@@ -394,10 +401,13 @@ font-family: Gayathri;
     padding-top: 27px
 }
 .image6{
-    height: auto;
-    width: 71%;
-    padding-left: 28%;
-    padding-top: 13px;
+    height: 250px;
+    width: 200px;
+    margin: 2% 14%;
+    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     }
 .board-name-footer{
     font-family: Gayathri;
@@ -417,16 +427,17 @@ font-family: Gayathri;
     border-radius: 20px !important;
     width: 96%;
     height: 100%;
-    box-shadow: 10px 10px 5px #ccc;
-    margin: 9% 14%;
+    /* box-shadow: 10px 10px 5px #ccc; */
+    margin: 6% 2%;
 }
 .image8{
-   text-align: center !important;
+    text-align: center !important;
     border-radius: 20px !important;
     width: 90%;
     height: 90%;
-    margin: 7% 15%;
-    box-shadow: 10px 10px 5px #ccc;
+    margin: 6% 6%;
+    /* box-shadow: 10px 10px 5px #ccc*/
+   
 }
 .image9{
     width: auto;
@@ -436,7 +447,7 @@ font-family: Gayathri;
 .col-md-4.col-sm-12.cardboard-parent > .card {
     margin: 10px auto;
     margin-bottom: 10%;
-    background: white !important;
+    
 }
 .stu-teach{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
@@ -444,12 +455,11 @@ font-family: Gayathri;
     padding: 3% 5%;
     width: 196px;
     height: 42px;
-    border-radius: 0px;
     border: none;
     text-align: center;
     font-family: Gayathri;
     font-size: 20px;
-    margin: 5% 33%;
+    margin: 5% 24%;
     border-radius: 10px;
 }
 .image10{
@@ -463,21 +473,21 @@ font-family: Gayathri;
     margin-top: 22px;
 }
 .contacts-page{
-    background: white;
+    
 }
 .switch-to{
-    padding: 3%;
+    padding: 0% 1%;
 }
 .row.switch-to > div {
-    padding: 1%;
+    padding: 0%;
     transform: translate(0, 0%);
     margin: auto;
 }
 
 .row.switch-to {
-    background: white;
+    
     color: black;
-    margin: 50px 0px;
+    padding: 10px 0px !important;
 }
 
 .row.switch-to > div > p.scnd_head {
@@ -684,8 +694,8 @@ body.container-fluid {
 }
 
 section.banner-section {
-    height: 64vh;
-    margin-bottom: 76px;
+    height: auto !important;
+    margin-bottom: 0px;
 }
 
 .col-md-8.col-sm-12.switch-to-desc > div >div > div {
@@ -698,12 +708,12 @@ section.banner-section {
 }
 .cards.cardboard.card {
     box-shadow: 6px 5px 20px 11px #f1eeee;
-    background: white;
+    
     border: none;
     border-radius: 12px;
 }
 .cards.cardboard.card > .card-footer {
-    background: white;
+    
 }
 .query-text{
     text-align: center;
@@ -724,6 +734,11 @@ section.banner-section {
     font-size: 22px !important;
     border: none !important;
 }
+/*.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    min-height: 327px;
+}*/
 /* width */
 ::-webkit-scrollbar {
   width: 12px;

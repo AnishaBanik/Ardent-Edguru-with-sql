@@ -1,42 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>{!!@$title!!}</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Gayathri' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body class="container-fluid">
-
-  <header class="nav-header">
-    <a href="/" class="logo">
-      <img src="https://edguruindia.com/images/Edguru%20India%20logo%20jpeg%20png/Edguru%20India%20Logo%20PNG/Edguru%20India%20H.png" alt="main-heading" class="main-heading" style="width: 200px;">
-    </a>
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="#home">{{$navbar[0]->heading}}</a></li>
-      <li><a href="#switch">{{$navbar[1]->heading}}</a></li>
-      <li><a href="#offer">{{$navbar[2]->heading}}</a></li>
-      <li><a href="#register">{{$navbar[3]->heading}}</a></li>
-      <li><a href="#contact">{{$navbar[4]->heading}}</a></li>
-    </ul>
-  </header>
-
-<div style="background-color: white;padding-top:150px; width: 99%">
-<section class="banner-section" id="home">
+@extends("layout.app")
+@section("content")
+<div style="background-color: white;padding-top:100px; width: 98%">
+<section class="banner-section" id="home" style="background-color: {{$setting[0]->background_colour}}">
   <div class="row">
     <div class="col-md-8 col-sm-12">
       <p class="header">
@@ -52,14 +17,14 @@
         Learn More
       </button>
     </div>
-    <div class="col-md-4 d-none d-lg-block " style="background-color: #ff7600">
+    <div class="col-md-4 d-none d-lg-block" style="background-color: #ff7600">
       <img src="{{ Voyager::image( $setting[0]->logo )}}" alt="image1" class="image1" 
       style="box-shadow: none;">
     </div>
   </div>
 </section>
 
-<section id="switch">
+<section id="switch" style=" background-color: {{$setting[1]->background_colour}} !important">
   <div class="row switch-to">
     <div class="col-md-4 col-sm-4" style="background-color: #6a2bbd">
       <img src="{{ Voyager::image( $setting[1]->logo )}}" alt="image2" class="image2"
@@ -93,9 +58,9 @@
   </div>
 </section>
 
-<section id="offer">
+<section id="offer" style="background-color: {{$setting[2]->background_colour}}">
   <div class="row">
-    <div class="col-sm-12" style="background: white">
+    <div class="col-sm-12">
       <p class="third_head">
         {{$setting[2]->heading}}
       </p>
@@ -108,7 +73,7 @@
       <div class="row">
         <div class="col-md-4 col-sm-12 cardboard-parent ">
           <div class="cards cardboard card">
-            <div class="card-body">
+            <div class="card-body" style="min-height: 327px; max-height: 327px;" >
               <img src="{{ Voyager::image( $slider[3]->logo )}}" alt="image4" class="image4">
               <p class="board-name-footer"> <b> {!!$slider[3]->description!!} </b>
               </p>
@@ -117,7 +82,7 @@
         </div>
         <div class="col-md-4 col-sm-12 cardboard-parent">
           <div class="cards cardboard card">
-            <div class="card-body" >
+            <div class="card-body" style="min-height: 327px; max-height: 327px;">
               <img src="{{ Voyager::image( $slider[4]->logo )}}" alt="image5" class="image5">
               <p class="board-name-footer"> <b>{!!$slider[4]->description!!} </b>
               </p>
@@ -126,7 +91,7 @@
         </div>
         <div class="col-md-4 col-sm-12 cardboard-parent">
           <div class="cards cardboard card">
-            <div class="card-body">
+            <div class="card-body" style="min-height: 327px; max-height: 327px;">
               <img src="{{ Voyager::image( $slider[5]->logo )}}" alt="image6" class="image6">
               <p class="board-name-footer"> <b>{!!$slider[5]->description!!}</b>
               </p>
@@ -137,7 +102,7 @@
     </div>
   </div>
 </section>
-<section id="register">
+<section id="register" style="background-color: {{$setting[3]->background_colour}}">
   <div class="row">
     <div class="forth_row_up col-sm-12">
       <p class="forth_head">
@@ -172,12 +137,12 @@
     </div>
   </div>
 </section>
-<section class="contacts-page" id="contact">
+<section class="contacts-page" id="contact" style="background-color: {{$setting[4]->background_colour}}">
   <div class="row">
-    <div class="last_page col-md-2 col-lg-3">
+    <div class="last_page col-md-4 col-lg-4" style="background-color: {{$setting[5]->background_colour}}">
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.2783499034595!2d88.4294156144339!3d22.568690438802893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275ad93c8289b%3A0xc099131033eb5917!2sSDF%20Building%2C%20GP%20Block%2C%20Sector%20V%2C%20Bidhannagar%2C%20Kolkata%2C%20West%20Bengal%20700091!5e0!3m2!1sen!2sin!4v1612178879383!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="map"></iframe>
     </div>
-    <div class="col-md-5 col-lg-5">
+    <div class="col-md-4 col-lg-4">
       <p class="last_head">
         {{$setting[4]->heading}}
       </p>
@@ -206,7 +171,7 @@
       </div>
       
     </div>
-    <div class="col-sm-12 col-md-5 col-lg-4">
+    <div class="col-sm-12 col-md-4 col-lg-4" style="background-color: {{$setting[5]->background_colour}}">
       <p class="last_head">
         {{$setting[5]->heading}}
       </p>
@@ -231,13 +196,6 @@
       
     </form>
     </div>
-</section>
-
-</body>
-<hr>
-<footer class="footer">
-  <a href="#">© 2021 Edguru India</a>
-  <a href="/terms">Terms of use</a> 
-  <a href="/privacy_policy">Privacy Policy</a>
-</footer>
-</html>
+  </section>
+</div>
+@endsection

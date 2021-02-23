@@ -8,6 +8,9 @@ use  App\Models\Slider;
 use  App\Models\Contact;
 use  App\Models\Navbar;
 use  App\Models\Queries;
+use  App\Models\PrivacyPolicy;
+use  App\Models\Term;
+use  App\Models\About;
 
 class WebsiteController extends Controller
 {
@@ -22,41 +25,44 @@ class WebsiteController extends Controller
    }
     public function teacher_register(Request $request)
    {
-   	return view("teacher_register");
+      $navbar = Navbar::get();
+      $data = ['navbar'=>$navbar, "title"=>"Edguru India"];
+   	return view("teacher_register")->with($data);
    }
    public function student_register(Request $request)
    {
-   	return view("student_register");
+      $navbar = Navbar::get();
+      $data = ['navbar'=>$navbar, "title"=>"Edguru India"];
+   	return view("student_register")->with($data);
    }
    public function terms(Request $request)
    {
-   	return view("terms");
+      $navbar = Navbar::get();
+      $term = Term::get();
+      $data = ['term'=> $term, 'navbar'=>$navbar, "title"=>"Edguru India"];
+   	return view("terms")->with($data);
    }
    public function privacy_policy(Request $request)
    {
-   	return view("privacy_policy");
+      $navbar = Navbar::get();
+      $privacy = PrivacyPolicy::get();
+      $data = ['privacy'=>$privacy, 'navbar'=>$navbar, "title"=>"Edguru India"];
+   	return view("privacy_policy")->with($data);
    }
    public function submitQuery(Request $request)
    {
-      //print_r($request->input());\
-      $email = $request->get("email_id");
-      $description = $request->get("description");
-      if(!$email || !$description)
-      {
-         return view("error");
-         //return redirect('/')->session()->put('key', 'hello new');
-            // echo "<script> 
-            //    alert('hello new');
-            //    window.location.href='/';
-            // </script>";
-      }
-      else{
+      //print_r($request->input());
          $query = new Queries;
          $query->email_id = $request->email_id;
          $query->description = $request->description;
          $query-> save();
          return redirect()->back();
-      }
-      
+   }
+   public function about(Request $request)
+   {
+      $navbar = Navbar::get();
+      $about = About::get();
+      $data = ['about'=>$about, 'navbar'=>$navbar, "title"=>"Edguru India"];
+      return view("about")->with($data);
    }
 }
