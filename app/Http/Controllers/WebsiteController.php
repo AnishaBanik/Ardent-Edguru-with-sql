@@ -11,6 +11,7 @@ use  App\Models\Queries;
 use  App\Models\PrivacyPolicy;
 use  App\Models\Term;
 use  App\Models\About;
+use  App\Models\Font;
 
 class WebsiteController extends Controller
 {
@@ -20,33 +21,38 @@ class WebsiteController extends Controller
    	$sliders = Slider::get();
    	$contact = Contact::get();
    	$navbar = Navbar::get();
-   	$data = ['setting'=>$settings, 'slider'=>$sliders, 'contact'=>$contact, 'navbar'=>$navbar, "title"=>"Edguru India"];
+      $font = Font::get();
+   	$data = ['font'=>$font, 'setting'=>$settings, 'slider'=>$sliders, 'contact'=>$contact, 'navbar'=>$navbar, "title"=>"Edguru India"];
    	return view("home_page")->with($data);
    }
     public function teacher_register(Request $request)
    {
       $navbar = Navbar::get();
-      $data = ['navbar'=>$navbar, "title"=>"Edguru India"];
+       $font = Font::get();
+      $data = ['font'=>$font, 'navbar'=>$navbar, "title"=>"Edguru India"];
    	return view("teacher_register")->with($data);
    }
    public function student_register(Request $request)
    {
       $navbar = Navbar::get();
-      $data = ['navbar'=>$navbar, "title"=>"Edguru India"];
+       $font = Font::get();
+      $data = ['font'=>$font, 'navbar'=>$navbar, "title"=>"Edguru India"];
    	return view("student_register")->with($data);
    }
    public function terms(Request $request)
    {
       $navbar = Navbar::get();
       $term = Term::get();
-      $data = ['term'=> $term, 'navbar'=>$navbar, "title"=>"Edguru India"];
+       $font = Font::get();
+      $data = ['font'=>$font, 'term'=> $term, 'navbar'=>$navbar, "title"=>"Edguru India"];
    	return view("terms")->with($data);
    }
    public function privacy_policy(Request $request)
    {
       $navbar = Navbar::get();
       $privacy = PrivacyPolicy::get();
-      $data = ['privacy'=>$privacy, 'navbar'=>$navbar, "title"=>"Edguru India"];
+       $font = Font::get();
+      $data = ['font'=>$font, 'privacy'=>$privacy, 'navbar'=>$navbar, "title"=>"Edguru India"];
    	return view("privacy_policy")->with($data);
    }
    public function submitQuery(Request $request)
@@ -62,7 +68,8 @@ class WebsiteController extends Controller
    {
       $navbar = Navbar::get();
       $about = About::get();
-      $data = ['about'=>$about, 'navbar'=>$navbar, "title"=>"Edguru India"];
+       $font = Font::get();
+      $data = ['font'=>$font, 'about'=>$about, 'navbar'=>$navbar, "title"=>"Edguru India"];
       return view("about")->with($data);
    }
 }

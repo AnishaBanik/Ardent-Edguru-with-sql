@@ -4,6 +4,10 @@
   <title>{!!@$title!!}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family={{$font[0]->mainheading_fontfamily}}' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family={{$font[0]->subheading_fontfamily}}' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family={{$font[0]->desc_fontfamily}}' rel='stylesheet'>
+
   <link href='https://fonts.googleapis.com/css?family=Gayathri' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
@@ -30,11 +34,11 @@
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
       
-      <li><a href="#home">{{$navbar[0]->heading}}</a></li>
+      <li><a href="/#home">{{$navbar[0]->heading}}</a></li>
       <li><a href="/about">{{$navbar[1]->heading}}</a></li>
-      <li><a href="#offer">{{$navbar[2]->heading}}</a></li>
-      <li><a href="#register">{{$navbar[3]->heading}}</a></li>
-      <li><a href="#contact">{{$navbar[4]->heading}}</a></li>
+      <li><a href="/#offer">{{$navbar[2]->heading}}</a></li>
+      <li><a href="/#register">{{$navbar[3]->heading}}</a></li>
+      <li><a href="/#contact">{{$navbar[4]->heading}}</a></li>
     </ul>
   </header>
 @yield("content");

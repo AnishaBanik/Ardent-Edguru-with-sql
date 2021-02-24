@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2021 at 02:21 PM
+-- Generation Time: Feb 24, 2021 at 12:41 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ardent_edguru`
+-- Database: `ardent-edguru`
 --
 
 -- --------------------------------------------------------
@@ -43,7 +43,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`, `background_colour`) VALUES
-(1, 'about\\February2021\\j3ycCxzzZ7K67UG3zpuz.JPG', 'Hello', '<p>History of creation.</p>\r\n<p>Description about the organisation.</p>', '2021-02-23 07:37:09', '2021-02-23 07:37:09', '#d68a8a');
+(1, 'about\\February2021\\j3ycCxzzZ7K67UG3zpuz.JPG', 'Hello', '<p>History of creation.</p>\r\n<p>Description about the organisation.</p>', '2021-02-23 07:37:00', '2021-02-24 00:10:58', '#c6b6ec');
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,18 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (95, 16, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 4),
 (96, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 0, '{}', 5),
 (97, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
-(98, 16, 'background_colour', 'color', 'Background Colour', 0, 1, 1, 1, 1, 1, '{}', 7);
+(98, 16, 'background_colour', 'color', 'Background Colour', 0, 1, 1, 1, 1, 1, '{}', 7),
+(99, 17, 'id', 'hidden', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(100, 17, 'mainheading_fontfamily', 'text', 'Mainheading Fontfamily', 0, 1, 1, 1, 1, 1, '{}', 2),
+(101, 17, 'mainheading_fontsize', 'number', 'Mainheading Fontsize', 0, 1, 1, 1, 1, 1, '{}', 3),
+(102, 17, 'subheading_fontfamily', 'text', 'Subheading Fontfamily', 0, 1, 1, 1, 1, 1, '{}', 4),
+(103, 17, 'subheading_fontsize', 'number', 'Subheading Fontsize', 0, 1, 1, 1, 1, 1, '{}', 5),
+(104, 17, 'desc_fontfamily', 'text', 'Desc Fontfamily', 0, 1, 1, 1, 1, 1, '{}', 6),
+(105, 17, 'desc_fontsize', 'number', 'Desc Fontsize', 0, 1, 1, 1, 1, 1, '{}', 7),
+(106, 17, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 0, '{}', 8),
+(107, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
+(108, 9, 'image_background', 'color', 'Image Background', 0, 1, 1, 1, 1, 1, '{}', 8),
+(109, 10, 'background_colour', 'color', 'Background Colour', 0, 1, 1, 1, 1, 1, '{}', 6);
 
 -- --------------------------------------------------------
 
@@ -192,14 +203,15 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2021-02-12 10:52:18', '2021-02-12 10:52:18'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2021-02-12 10:52:18', '2021-02-12 10:52:18'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2021-02-12 10:52:18', '2021-02-12 10:52:18'),
-(9, 'home', 'home', 'Home', 'Homes', 'voyager-anchor', 'App\\Models\\Home', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 11:36:32', '2021-02-23 02:33:45'),
-(10, 'slider', 'slider', 'Slider', 'Sliders', 'voyager-dot-3', 'App\\Models\\Slider', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:09:26', '2021-02-12 12:11:06'),
+(9, 'home', 'home', 'Home', 'Homes', 'voyager-anchor', 'App\\Models\\Home', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 11:36:32', '2021-02-24 02:21:21'),
+(10, 'slider', 'slider', 'Slider', 'Sliders', 'voyager-dot-3', 'App\\Models\\Slider', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:09:26', '2021-02-24 05:18:44'),
 (11, 'contact', 'contact', 'Contact', 'Contacts', 'voyager-telephone', 'App\\Models\\Contact', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:24:29', '2021-02-12 12:25:56'),
 (12, 'navbar', 'navbar', 'Navbar', 'Navbars', 'voyager-params', 'App\\Models\\Navbar', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-12 12:35:51', '2021-02-12 12:37:18'),
 (13, 'privacy_policy', 'privacy-policy', 'Privacy Policy', 'Privacy Policies', 'voyager-rocket', 'App\\Models\\PrivacyPolicy', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-23 01:00:30', '2021-02-23 06:31:00'),
 (14, 'terms', 'terms', 'Term', 'Terms', NULL, 'App\\Models\\Term', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-02-23 01:56:22', '2021-02-23 01:56:22'),
 (15, 'queries', 'queries', 'Query', 'Queries', NULL, 'App\\Models\\Queries', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-02-23 02:26:02', '2021-02-23 02:26:02'),
-(16, 'about', 'about', 'About', 'Abouts', NULL, 'App\\Models\\About', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-23 07:29:28', '2021-02-23 07:36:46');
+(16, 'about', 'about', 'About', 'Abouts', NULL, 'App\\Models\\About', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-02-23 07:29:28', '2021-02-23 07:36:46'),
+(17, 'fonts', 'fonts', 'Font', 'Fonts', NULL, 'App\\Models\\Font', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-02-24 01:40:38', '2021-02-24 01:40:38');
 
 -- --------------------------------------------------------
 
@@ -220,6 +232,31 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `fonts`
+--
+
+CREATE TABLE `fonts` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `mainheading_fontfamily` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mainheading_fontsize` int(11) DEFAULT NULL,
+  `subheading_fontfamily` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subheading_fontsize` int(11) DEFAULT NULL,
+  `desc_fontfamily` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `desc_fontsize` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `fonts`
+--
+
+INSERT INTO `fonts` (`id`, `mainheading_fontfamily`, `mainheading_fontsize`, `subheading_fontfamily`, `subheading_fontsize`, `desc_fontfamily`, `desc_fontsize`, `created_at`, `updated_at`) VALUES
+(1, 'Gayathri', 24, 'Gayathri', 20, 'Gayathri', 10, '2021-02-24 02:05:00', '2021-02-24 02:06:30');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `home`
 --
 
@@ -230,20 +267,21 @@ CREATE TABLE `home` (
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `background_colour` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `background_colour` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_background` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `home`
 --
 
-INSERT INTO `home` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`, `background_colour`) VALUES
-(1, 'home\\February2021\\3n0wa5wfl7FdtCSXyZ0O.png', 'ONLINE LEARNING', 'Welcome to the gateway of online learning. Choose your class/tution and register to start a life altering journey bringing you closer to your goals.', '2021-02-12 11:42:00', '2021-02-23 04:56:56', '#ffffff'),
-(2, 'home\\February2021\\ffB0SBfAiXPSVtFrqPWQ.jpg', 'Switch to EdGuru', 'Learn from the best gurus online from the comfort and safety of your home. <br>\r\n        Our panel of teachers are a few clicks away.', '2021-02-12 11:59:00', '2021-02-23 04:57:07', '#ffffff'),
-(3, NULL, 'What we offer', 'We have empanelled vast of experienced school and private tutors,<br> who will now be available for online live tution classes. <br>Choose your class according to your board/grade and other options.', '2021-02-12 12:02:00', '2021-02-23 04:57:57', '#ffffff'),
-(4, NULL, 'Register with us for free', 'You are a few clicks away from entering a new age of learning/teaching experience. <br>\r\n        Please register here.', '2021-02-12 12:02:00', '2021-02-23 04:57:22', '#ffffff'),
-(5, NULL, 'Contact Us', NULL, '2021-02-12 12:31:00', '2021-02-23 04:57:32', '#ffffff'),
-(6, NULL, 'Query form', NULL, '2021-02-12 12:31:00', '2021-02-23 04:57:46', '#ffffff');
+INSERT INTO `home` (`id`, `logo`, `heading`, `description`, `created_at`, `updated_at`, `background_colour`, `image_background`) VALUES
+(1, 'home\\February2021\\Gz0LEosZhM4hsoegPbIc.gif', 'Learning paths will never be the same again!', 'Welcome to the gateway of online learning. Choose your class/tution and register to start a life altering journey bringing you closer to your goals.', '2021-02-12 11:42:00', '2021-02-24 02:59:38', '#ffffff', '#ffe0e0'),
+(2, 'home\\February2021\\dX1zo96Z71TEMx1Nbt2q.gif', 'Switch to EdGuru', 'Learn from the best gurus online from the comfort and safety of your home. <br>\r\n        Our panel of teachers are a few clicks away.', '2021-02-12 11:59:00', '2021-02-24 02:22:23', '#ffffff', '#e0e4ff'),
+(3, NULL, 'What we offer', 'We have empanelled vast of experienced school and private tutors,<br> who will now be available for online live tution classes. <br>Choose your class according to your board/grade and other options.', '2021-02-12 12:02:00', '2021-02-23 04:57:57', '#ffffff', NULL),
+(4, NULL, 'Register with us for free', 'You are a few clicks away from entering a new age of learning/teaching experience. <br>\r\n        Please register here.', '2021-02-12 12:02:00', '2021-02-23 04:57:22', '#ffffff', NULL),
+(5, NULL, 'Contact Us', NULL, '2021-02-12 12:31:00', '2021-02-23 04:57:32', '#ffffff', NULL),
+(6, NULL, 'Query form', NULL, '2021-02-12 12:31:00', '2021-02-23 04:57:46', '#ffffff', NULL);
 
 -- --------------------------------------------------------
 
@@ -310,7 +348,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (20, 1, 'Privacy Policies', '', '_self', 'voyager-rocket', '#000000', NULL, 19, '2021-02-23 01:00:31', '2021-02-23 02:53:17', 'voyager.privacy-policy.index', 'null'),
 (21, 1, 'Terms', '', '_self', 'voyager-lifebuoy', '#000000', NULL, 20, '2021-02-23 01:56:22', '2021-02-23 02:53:37', 'voyager.terms.index', 'null'),
 (22, 1, 'Queries', '', '_self', 'voyager-question', '#000000', NULL, 21, '2021-02-23 02:26:02', '2021-02-23 02:54:25', 'voyager.queries.index', 'null'),
-(23, 1, 'Abouts', '', '_self', NULL, NULL, NULL, 22, '2021-02-23 07:29:28', '2021-02-23 07:29:28', 'voyager.about.index', NULL);
+(23, 1, 'Abouts', '', '_self', NULL, NULL, NULL, 22, '2021-02-23 07:29:28', '2021-02-23 07:29:28', 'voyager.about.index', NULL),
+(24, 1, 'Fonts', '', '_self', NULL, NULL, NULL, 23, '2021-02-24 01:40:38', '2021-02-24 01:40:38', 'voyager.fonts.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -477,7 +516,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (83, 'read_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
 (84, 'edit_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
 (85, 'add_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
-(86, 'delete_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28');
+(86, 'delete_about', 'about', '2021-02-23 07:29:28', '2021-02-23 07:29:28'),
+(87, 'browse_fonts', 'fonts', '2021-02-24 01:40:38', '2021-02-24 01:40:38'),
+(88, 'read_fonts', 'fonts', '2021-02-24 01:40:38', '2021-02-24 01:40:38'),
+(89, 'edit_fonts', 'fonts', '2021-02-24 01:40:38', '2021-02-24 01:40:38'),
+(90, 'add_fonts', 'fonts', '2021-02-24 01:40:38', '2021-02-24 01:40:38'),
+(91, 'delete_fonts', 'fonts', '2021-02-24 01:40:38', '2021-02-24 01:40:38');
 
 -- --------------------------------------------------------
 
@@ -559,7 +603,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (83, 1),
 (84, 1),
 (85, 1),
-(86, 1);
+(86, 1),
+(87, 1),
+(88, 1),
+(89, 1),
+(90, 1),
+(91, 1);
 
 -- --------------------------------------------------------
 
@@ -609,7 +658,8 @@ INSERT INTO `queries` (`id`, `email_id`, `description`, `created_at`, `updated_a
 (6, 'anisha1@g.c', 'hi', NULL, NULL),
 (7, 'a@a.a', 'query', NULL, NULL),
 (8, 'b@b.com', 'qwe', NULL, NULL),
-(9, 'q@q.com', 'abcd', NULL, NULL);
+(9, 'q@q.com', 'abcd', NULL, NULL),
+(10, 'abc@v.v', 'asq', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -677,22 +727,23 @@ CREATE TABLE `slider` (
   `logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `background_colour` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `slider`
 --
 
-INSERT INTO `slider` (`id`, `logo`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'slider\\February2021\\I8xUocUGPukEIOI5eqar.png', 'Easy to register for free. Pay once you choose.', '2021-02-12 12:15:09', '2021-02-12 12:15:09'),
-(2, 'slider\\February2021\\eOctKknd8sbe2JIMVd1h.png', 'Panel of experienced teachers at your fingertips.', '2021-02-12 12:15:35', '2021-02-12 12:15:35'),
-(3, 'slider\\February2021\\baTP3O0SUDjEkxkkJU1A.png', 'Flexible slot selection based on your timing.', '2021-02-12 12:15:58', '2021-02-12 12:15:58'),
-(4, 'slider\\February2021\\UpneA97W7xu7KNPJ70I5.jpeg', 'ICSE BOARD', '2021-02-12 12:16:00', '2021-02-23 02:50:04'),
-(5, 'slider\\February2021\\D1lfRGfQB7EzGsqkqJNF.png', 'WB BOARD', '2021-02-12 12:16:00', '2021-02-23 02:02:56'),
-(6, 'slider\\February2021\\dRJ0KwlNKZBibHoUi36U.png', 'CBSE BOARD', '2021-02-12 12:17:00', '2021-02-23 02:02:35'),
-(7, 'slider\\February2021\\OTYeO3tKAGMnCaRyL5tk.jpg', 'As a student', '2021-02-12 12:17:32', '2021-02-12 12:17:32'),
-(8, 'slider\\February2021\\VLzZ9Kr2qyXfFaQ0JLb8.jpg', 'As a teacher', '2021-02-12 12:17:54', '2021-02-12 12:17:54');
+INSERT INTO `slider` (`id`, `logo`, `description`, `created_at`, `updated_at`, `background_colour`) VALUES
+(1, 'slider\\February2021\\aOAamG1MPpO6SmcGoYmn.gif', 'Easy to register for free. Pay once you choose.', '2021-02-12 12:15:00', '2021-02-24 05:19:57', '#ffbdbd'),
+(2, 'slider\\February2021\\enI6C74Ccz8yvFoXHlrk.gif', 'Panel of experienced teachers at your fingertips.', '2021-02-12 12:15:00', '2021-02-24 05:19:35', '#f9b9b9'),
+(3, 'slider\\February2021\\baTP3O0SUDjEkxkkJU1A.png', 'Flexible slot selection based on your timing.', '2021-02-12 12:15:00', '2021-02-24 05:19:15', '#eeb5b5'),
+(4, 'slider\\February2021\\UpneA97W7xu7KNPJ70I5.jpeg', 'ICSE BOARD', '2021-02-12 12:16:00', '2021-02-24 05:24:16', '#e4df5e'),
+(5, 'slider\\February2021\\D1lfRGfQB7EzGsqkqJNF.png', 'WB BOARD', '2021-02-12 12:16:00', '2021-02-24 05:24:33', '#c2d36f'),
+(6, 'slider\\February2021\\dRJ0KwlNKZBibHoUi36U.png', 'CBSE BOARD', '2021-02-12 12:17:00', '2021-02-24 05:23:40', '#e6e19e'),
+(7, 'slider\\February2021\\UBZ5vxuya3eCrchqmKEn.gif', 'student information', '2021-02-12 12:17:00', '2021-02-24 05:44:26', '#bdc2e5'),
+(8, 'slider\\February2021\\y0umW2cUL2V13Ur7DJoH.gif', 'teacher information', '2021-02-12 12:17:00', '2021-02-24 05:45:23', '#bfe6f7');
 
 -- --------------------------------------------------------
 
@@ -845,6 +896,12 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `fonts`
+--
+ALTER TABLE `fonts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `home`
 --
 ALTER TABLE `home`
@@ -978,19 +1035,25 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `fonts`
+--
+ALTER TABLE `fonts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `home`
@@ -1008,7 +1071,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1026,7 +1089,7 @@ ALTER TABLE `navbar`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `privacy_policy`
@@ -1038,7 +1101,7 @@ ALTER TABLE `privacy_policy`
 -- AUTO_INCREMENT for table `queries`
 --
 ALTER TABLE `queries`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `roles`

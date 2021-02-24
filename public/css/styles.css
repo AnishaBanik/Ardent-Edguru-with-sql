@@ -5,9 +5,9 @@
     .stu-teach{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
     color: white;
-    padding: 1% 5% !important;
-    width: 196px;
-    height: 42px;
+    padding: 0% 5% !important;
+    width: auto;
+    height: auto;
     border-radius: 0px;
     border: none;
     text-align: center;
@@ -15,6 +15,9 @@
     font-size: 20px;
     margin: 2% 24% !important;
     border-radius: 10px;
+    min-width:100px;
+    line-height : 42px;
+    overflow: visible;
     }
     .image9{
     width: auto;
@@ -53,16 +56,19 @@
     .stu-teach{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
     color: white;
-    padding: 5% 5% !important;
+    padding: 0% 5% !important;
     width: auto !important;
     height: auto !important;
     border-radius: 0px;
     border: none;
     text-align: center;
     font-family: Gayathri;
-    font-size: 25px;
+    font-size: 20px !important;
     margin: 5% 24% !important;
     border-radius: 10px;
+    min-width:140px;
+    line-height : 42px;
+    overflow: visible;
     }
     .submit-btn{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
@@ -178,11 +184,10 @@
     }
 }
 .image1{
-    width: 70%;
-    height: 70%;
-    margin: 12% 15%;
-    object-fit: fill;
-    display: block;
+        width: 80%;
+    height: 65%;
+    margin: 5% 12%;
+    
 }
 .first_page{
     width: 100%;
@@ -280,7 +285,6 @@ background-color: white;
     height: 100%;
 }
 .cards{
-    background-color: #f7f0f7 !important;
     height: auto;
     width: 80%;
     margin-top: -150px;
@@ -452,15 +456,18 @@ font-family: Gayathri;
 .stu-teach{
     background-image: linear-gradient(to right, #0e0869, #7a84f3);
     color: white;
-    padding: 3% 5%;
-    width: 196px;
-    height: 42px;
+    padding: 0% 5%;
+    width: auto;
+    height: auto;
     border: none;
     text-align: center;
     font-family: Gayathri;
-    font-size: 20px;
+    font-size: 17px;
     margin: 5% 24%;
     border-radius: 10px;
+    min-width:140px;
+    line-height : 42px;
+    overflow: visible;
 }
 .image10{
     text-align: center;
@@ -705,6 +712,8 @@ section.banner-section {
     padding: 11px;
     border-radius: 13px;
     min-height: 280px !important;
+    max-height: 280px !important;
+    background-color: {{$setting[1]->background_colour}} !important;
 }
 .cards.cardboard.card {
     box-shadow: 6px 5px 20px 11px #f1eeee;
@@ -759,4 +768,7 @@ section.banner-section {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
+}
+.section2_card{
+
 }
